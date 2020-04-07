@@ -1,7 +1,16 @@
 #main {
   width: auto;
+  font-family: 'Roboto', sans-serif;
   background-color: lightgray;
   margin: 0;
+}
+
+#title,
+#subtitle,
+#tribute-info-title,
+#img-caption,
+#footer-note {
+  text-align: center;
 }
 
 #img-div {
@@ -9,9 +18,36 @@
 }
 
 #image {
+  display: block;
   margin-left: auto;
   margin-right: auto;
-  display: block;
-  max-width: 80%;
   height: auto;
+  max-width: 80%;
+}
+
+#tribute-info-title,
+.eventYear,
+#footer-note {
+  font-weight: bold;
+}
+
+#tribute-info-title,
+#footer-note {
+  font-size: 1.2em;
+}
+
+ul, blockquote {
+  max-width: 600px;
+  margin: 0 auto 50px auto;
+  text-align: left;
+  line-height: 1.6;
+}
+
+blockquote {
+  font-style: italic;
+  font-weight: lighter;
+}
+
+#blockquote-footer {
+  margin-left: 1.5em;
 }
