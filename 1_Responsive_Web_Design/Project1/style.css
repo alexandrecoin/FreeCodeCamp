@@ -1,4 +1,17 @@
 #main {
   width: auto;
   background-color: lightgray;
+  margin: 0;
+}
+
+#img-div {
+  background-color: white;
+}
+
+#image {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 80%;
+  height: auto;
 }
