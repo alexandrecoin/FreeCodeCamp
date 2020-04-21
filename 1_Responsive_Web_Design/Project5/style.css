@@ -1,0 +1,14 @@
+#welcome-section {
+  height: 100vh;
+}
+
+#navbar {
+  position: fixed;
+  top: 0;
+}
+
+@media (max-width: 800px) {
+  body {
+    color: blue;
+  }
+}
