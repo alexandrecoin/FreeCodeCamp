@@ -2,6 +2,8 @@
   max-width: 40%;
 }
 
-.button {
-  border: 0px;
+.btn:focus, .btn:active {
+  outline: none !important;
+  border-style: none;
+  box-shadow: none;
 }
