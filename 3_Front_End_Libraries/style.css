@@ -2,8 +2,16 @@
   max-width: 40%;
 }
 
-.btn:focus, .btn:active {
+.btn:focus,
+.btn:active {
   outline: none !important;
   border-style: none;
   box-shadow: none;
+}
+
+.vertical-center {
+  min-height: 100%;
+  min-height: 100vh; 
+  display: flex;
+  align-items: center;
 }
