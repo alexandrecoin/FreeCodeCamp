@@ -8,7 +8,6 @@ function getRandomColor() {
 }
 
 const setRandomColor = () => {
-  const quote = getQuote();
   const randomColor = getRandomColor();
   const list = document.querySelectorAll('.container-fluid, .btn');
   list.forEach((e) => {
@@ -17,10 +16,14 @@ const setRandomColor = () => {
   });
 };
 
-const getQuote = async () => {
+ const getQuote = async () => {
+  setRandomColor();
   let result = [];
   await fetch('https://type.fit/api/quotes')
     .then((response) => response.json())
     .then((data) => (result = data));
-  console.log(result);
+  let element = document.querySelector('.blockquote');
+  element.innerHTML = result[Math.floor(Math.random() * result.length)].text;
 };
+
+window.onload = getQuote();
