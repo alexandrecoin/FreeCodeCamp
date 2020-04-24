@@ -16,14 +16,18 @@ const setRandomColor = () => {
   });
 };
 
- const getQuote = async () => {
+const getQuote = async () => {
   setRandomColor();
   let result = [];
   await fetch('https://type.fit/api/quotes')
     .then((response) => response.json())
     .then((data) => (result = data));
+  const index = Math.floor(Math.random() * result.length);
   let element = document.querySelector('.blockquote');
-  element.innerHTML = result[Math.floor(Math.random() * result.length)].text;
+  let author = document.querySelector('#author');
+  element.innerHTML = result[index].text;
+  console.log(result[index].author);
+  if (author) author.innerHTML = result[index].author;
 };
 
 window.onload = getQuote();
